@@ -53,7 +53,7 @@ public class Update extends HttpServlet {
         }
       }
 
-      RequestDispatcher req = request.getRequestDispatcher("WEB-INF/person.jsp");
+      RequestDispatcher req = request.getRequestDispatcher("WEB-INF/views/person.jsp");
       System.out.println("wczytuuje");
       try {
 
@@ -76,7 +76,7 @@ public class Update extends HttpServlet {
         }
       }
 
-      RequestDispatcher req = request.getRequestDispatcher("WEB-INF/item.jsp");
+      RequestDispatcher req = request.getRequestDispatcher("WEB-INF/views/item.jsp");
       System.out.println("wczytuuje");
       try {
 

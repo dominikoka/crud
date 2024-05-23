@@ -1,214 +1,363 @@
-.read
-{
-    margin: 0 20px;
-    color: white;
+@import url('https://fonts.cdnfonts.com/css/8bit-wonder');
+.reset-Button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
 }
-.bckg
+.main_column
 {
-    /*https://unblast.com/wp-content/uploads/2021/01/Space-Background-Images.jpg*/
-    background-image: url('https://i.pinimg.com/originals/a0/74/a8/a074a8a62cf3c17b39c70aa1270ef4eb.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  flex: 1 0 400px;
 }
-.read_btns
+.form
 {
-    margin-top: 12px;
+  box-shadow:inset 0px 0px 0px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  min-height: 400px;
 }
-.item_btns
+.form_ageBox
 {
-    margin-top: 0px;
+  display: flex;
 }
-.items_box
+.form_box
 {
-    color: white;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
 }
-.person_CloseBtn,.person_SendBtn
+.form_emailField {
+  display: none;
+  margin-top: 20px;
+}
+.read {
+
+  color: white;
+}
+
+.bckg {
+  font-family: '8BIT WONDER', sans-serif;
+  /*https://unblast.com/wp-content/uploads/2021/01/Space-Background-Images.jpg*/
+  background-image: url('https://images2.alphacoders.com/117/1178604.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.read_btns {
+  margin-top: 12px;
+}
+
+.item_btns {
+  margin-top: 0px;
+}
+
+.items_box {
+  color: white;
+}
+
+.person_CloseBtn, .person_SendBtn {
+  border-radius: 12px;
+  border-color: rebeccapurple;
+  background-color: rebeccapurple;
+  margin: 10px 0;
+  color: white;
+}
+
+.read_person {
+  display: flex;
+  font-weight: bold;
+}
+
+.read_item {
+  display: flex;
+}
+
+.createPerson_CloseBtnBox {
+  text-align: right;
+  margin: 20px 20px 0px 20px
+}
+
+.createPerson_SendBtnBox {
+  margin: 20px 0;
+}
+
+.createPerson_title {
+  margin: 5px 0px 30px 0px;
+}
+.createPerson_surnameBox,.createPerson_nameBox,.createPerson_ageBox
 {
-    border-radius: 12px;
-    border-color: rebeccapurple;
-    background-color: rebeccapurple;
-    margin: 10px 0;
-    color: white;
-}
-.read_person
-{
-    display: flex;
-    font-weight: bold;
-}
-.read_item
-{
-    display: flex;
-}
-.person,.item{
-    /*width: 100px;*/
-    /*height: 100px;*/
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    text-align: center;
-    background-color: rebeccapurple;
-    max-width: 400px;
-    top: 25%;
-    font-family: 'Pixelify Sans', sans-serif;
-    border-radius: 10px;
-}
-.main
-{
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-}
-.read_btns
-{
-    display: none;
-}
-.read_person:hover .read_btns
-{
-    display: block;
-}
-.read_item:hover .read_btns
-{
-    display: block;
-}
-.read_addPersonBtn,.item_addItemClose
-{
-    background-color: rebeccapurple;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: auto;
-}
-.read_name
-{
-    padding-right: 15px;
-    width: 80px;
-}
-.read_surname
-{
-    padding-right: 15px;
-    width: 80px;
-}
-.read_age
-{
-    padding-right: 15px;
-    width: 80px;
-}
-.read_UpdateBtn,.read_delete,.read_addItemBtn
-{
-    background-color: darkslategray;
-    color: white;
-    border-radius: 5px;
-    padding: 3px 15px;
-    margin: auto;
-    border-color: darkslategray ;
-}
-.read
-{
-    min-width: 500px;
-    /*font-family: 'Pixelify Sans', sans-serif;*/
-    font-size: 23px;
-}
-.item_select
-{
-    margin: 0px 20px;
-}
-.items_box
-{
-    font-size: 20px;
-}
-.read_data
-{
-    min-width: 200px;
-    display: flex;
-    /*//gap: 20px;*/
-    padding: 10px 0;
-}
-.read_dataItem
-{
-    min-width: 285px;
-    display: flex;
-    /*//gap: 20px;*/
-    /*padding: 3px 0;*/
-}
-.items_item
-{
-    padding: 7px 0;
-    display: flex;
-    width: 240px;
-    justify-content: space-between;
-}
-.read_item
-{
-    margin: 2px 0;
-}
-.index_title
-{
-    text-align: center;
-    margin: auto;
-    padding: 30px 0;
-    color: white;
-    font-size: 80px;
-    font-family: 'Pixelify Sans', sans-serif;
-}
-.items_box
-{
-    font-size: 23px;
-    margin-top: 30px;
+  margin: 10px 0;
 
 }
-.items_btns
+.createPerson_SendBtn
 {
-    margin-top: 3px;
+  position: relative;
+  overflow: hidden;
+  font-size: 24px;
+
+  /*box-shadow: 3px 3px 0 white, inset 1px 1px 1px white;*/
+  /*border: 2px solid white;*/
+  padding: 3px 10px 6px 10px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.createPerson_SendBtn:after,.createPerson_CloseBtn:after
+{
+
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
+  outline-color: red;
+}
+.createPerson_SendBtn:hover::after, .createPerson_SendBtn:focus::after,.createPerson_CloseBtn:hover::after, .createPerson_CloseBtn:focus::after
+{
+  animation: sheen 1s forwards;
+}
+.createPerson_CloseBtn
+{
+  position: relative;
+  overflow: hidden;
+
+  padding: 3px 10px 6px 10px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.createPerson_surname,.createPerson_name,.createPerson_age
+{
+  padding-top: 2px;
+  font-size: 13px;
+  border:1px solid #ccc;
+  outline:none;
+  width:270px;
+  /*height:50px;*/
+  border-radius:33px;
+  margin:0 auto;
+  display:block;
+  color:#151515;
+  font-family: '8BIT WONDER', sans-serif;
+  padding-left:30px;
+  position:relative;
+  /*top:70px;*/
+  left:10px;
+}
+/*.createPerson_surname*/
+/*{*/
+/*  background: url('https://dominikoka.github.io/challenge_1/components/img/username.png') no-repeat 2px, url('https://dominikoka.github.io/challenge_1/components/img/line.png') no-repeat 10px;*/
+/*}*/
+
+.createPerson {
+  /*width: 100px;*/
+  /*height: 100px;*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rebeccapurple;
+  max-width: 400px;
+  top: 25%;
+  font-family: '8BIT WONDER', sans-serif;
+  border-radius: 10px;
+}
+
+.main {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.read_btns {
+  display: none;
+}
+
+.read_person:hover .read_btns {
+  display: block;
+}
+
+.read_item:hover .read_btns {
+  display: block;
+}
+
+.read_addPersonBtn, .item_addItemClose {
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: auto;
+}
+
+.read_name {
+  padding-right: 15px;
+  width: 80px;
+}
+
+.read_surname {
+  padding-right: 15px;
+  width: 80px;
+}
+
+.read_age {
+  padding-right: 15px;
+  width: 80px;
+}
+
+.read_UpdateBtn, .read_delete, .read_addItemBtn {
+  background-color: darkslategray;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 15px;
+  margin: auto;
+  border-color: darkslategray;
+}
+
+.read {
+  box-shadow:inset 0px 0px 0px 20px rgba(0, 0, 0, 0.2);
+  /*font-family: 'Pixelify Sans', sans-serif;*/
+  font-size: 23px;
+}
+
+.item_select {
+  margin: 0px 20px;
+}
+.items
+{
+  box-shadow: inset 0px 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.items_box {
+  font-size: 20px;
+}
+
+.read_data {
+  min-width: 200px;
+  display: flex;
+  /*//gap: 20px;*/
+  padding: 10px 0;
+}
+
+.read_dataItem {
+  min-width: 285px;
+  display: flex;
+  /*//gap: 20px;*/
+  /*padding: 3px 0;*/
+}
+
+.items_item {
+  padding: 7px 0;
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
+}
+
+.read_item {
+  margin: 2px 0;
+}
+
+.main_title {
+  font-family: '8BIT WONDER', sans-serif;
+
+  text-align: center;
+  margin: auto;
+  padding: 30px 0;
+  color: white;
+  font-size: 80px;
+}
+
+.index_titleefect {
+  margin: 0.5em 0;
+  font-family: '8BIT WONDER', sans-serif;
+  font-size: 6em;
+  color: #f9fafa;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-shadow: -0.09em 0 0 #F22613, 0.09em 0 0 #00FFFF;
+}
+
+.items_box {
+  font-size: 23px;
+  margin-top: 30px;
 
 }
-input[type="text"] {
-    /*border: 2px solid #4CAF50; !* Ustawia zieloną ramkę *!*/
-    /*padding: 10px; !* Dodaje wewnętrzne odstępy *!*/
-    /*font-size: 16px; !* Ustawia rozmiar czcionki *!*/
-    border-radius: 5px; /* Zaokrągla rogi */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Dodaje cień */
-    outline: none; /* Usuwa domyślny obrys */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Dodaje płynne przejścia */
-    font-family: 'Pixelify Sans', sans-serif;
-    color: darkslategray;
+
+.items_btns {
+  margin-top: 3px;
+  display: flex;
 }
-input[type="text"]::placeholder {
-    color: #999; /* Ustawia kolor tekstu zastępczego (placeholder) */
-    font-style: italic; /* Ustawia styl czcionki tekstu zastępczego */
+
+
+
+.item_addItemBtn, .item_addItemClose {
+  margin: 30px 0;
 }
-.item_addItemBtn,.item_addItemClose
-{
-    margin: 30px 0;
-}
+
 @media (max-width: 800px) {
-    .main
-    {
-        display: block;
-    }
-    .read
-    {
-        width: 455px;
-        margin: auto;
-    }
-    .read_addPersonBtn
-    {
-        width: inherit;
-    }
-    .items{
-        width: 455px;
-        margin: auto;
-    }
-    .items_item
-    {
-        margin: auto;
-    }
-    .read_UpdateBtn, .read_delete, .read_addItemBtn {
+  .main {
+    display: block;
+  }
 
-        padding: 3px 8px;
+  .read {
+    width: 455px;
+    margin: auto;
+  }
 
-    }
+  .read_addPersonBtn {
+    width: inherit;
+  }
+
+  .items {
+    width: 455px;
+    margin: auto;
+  }
+
+  .items_item {
+    margin: auto;
+  }
+
+  .read_UpdateBtn, .read_delete, .read_addItemBtn {
+
+    padding: 3px 8px;
+
+  }
+}
+
+
+
+/* Remove excess padding and border in Firefox 4+ */
+&::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
 }

@@ -24,7 +24,7 @@ public class addItemToPersonWindow extends HttpServlet {
     System.out.println("muj numer " + numberDB);
 
     request.setAttribute("numberDB", numberDB);
-    RequestDispatcher req = request.getRequestDispatcher("WEB-INF/addItemToPerson.jsp");
+    RequestDispatcher req = request.getRequestDispatcher("WEB-INF/views/addItemToPerson.jsp");
 
     try {
 

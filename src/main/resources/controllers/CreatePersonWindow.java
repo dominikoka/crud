@@ -20,7 +20,7 @@ public class CreatePersonWindow extends HttpServlet {
 
     if(toModify.equals("person")){
       System.out.println("perspn");
-      RequestDispatcher req = request.getRequestDispatcher("WEB-INF/createPerson.jsp");
+      RequestDispatcher req = request.getRequestDispatcher("WEB-INF/views/createPerson.jsp");
 
       try {
 
@@ -33,7 +33,7 @@ public class CreatePersonWindow extends HttpServlet {
     else
     {
       System.out.println("cos innego");
-      RequestDispatcher req = request.getRequestDispatcher("WEB-INF/createItem.jsp");
+      RequestDispatcher req = request.getRequestDispatcher("WEB-INF/views/createItem.jsp");
 
       try {
 
