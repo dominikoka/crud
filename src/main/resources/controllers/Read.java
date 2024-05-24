@@ -36,7 +36,7 @@ public class Read extends HttpServlet {
 //      List<List<String>> increasePersonsAndItems = mode.showIncreaseResultPersonAndItem(items,persons);
       List<List<String>> orders = mode.showOrders(items,persons);
     List<List<String>> emptyPerson = mode.showEmptyPersons(orders,persons);
-      List<List<String>> sordList = mode.sortListOrders(orders);
+      List<List<String>> sortedOrder = mode.sortListOrders(orders);
 
 
      // mode.showItem
@@ -49,7 +49,7 @@ public class Read extends HttpServlet {
 //    System.out.println("dziala");
      response.setContentType("text/plain");
 //    response.getWriter().write("greetings");
-      request.setAttribute("personsanditems", sordList);
+      request.setAttribute("personsanditems", sortedOrder);
       request.setAttribute("emptyperson", emptyPerson);
       request.setAttribute("items", items);
       RequestDispatcher req = request.getRequestDispatcher("index.jsp");

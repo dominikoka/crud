@@ -13,6 +13,7 @@
     request.setAttribute("type",typeAndPlace);
     String type = typeAndPlace;
     out.print("<div class=\"createPerson_CloseBtnBox \">");
+
     out.print("<button class=\"createPerson_CloseBtn reset-Button\">X</button>");
     out.print("</div>");
     out.print("<div class=\"createPerson_title\">CREATE PERSON</div>");

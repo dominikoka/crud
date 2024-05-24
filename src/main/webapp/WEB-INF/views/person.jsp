@@ -15,15 +15,16 @@
     System.out.println("z nojego jsp typeandplace" + typeAndPlace);
     request.setAttribute("type",typeAndPlace);
     String type = typeAndPlace;
-    out.print("<button class=\"person_CloseBtn\">X</button>");
+    out.print("<button class=\"person_CloseBtn person_editCloseBtn\">X</button>");
+    out.print("<div class=\"createPerson_title\">EDIT PERSON</div>");
     out.print("<div class=\"person_surname\">");
-      out.print("<input type=\"text\" id=\"firstName\" name=\"firstName\" value=\""+atr2+"\">");
+      out.print("<input type=\"text\" class=\"person_surnameInput\" id=\"firstName\" name=\"firstName\" value=\""+atr2+"\">");
     out.print("</div>");
     out.print("<div class=\"person_name\">");
-      out.print("<input type=\"text\" id=\"lastName\" name=\"lastName\" value=\""+atr1+"\">");
+      out.print("<input type=\"text\" id=\"lastName\" class=\"person_lastNameInput\" name=\"lastName\" value=\""+atr1+"\">");
     out.print("</div>");
     out.print("<div class=\"person_age\">");
-      out.print("<input type=\"text\" id=\"age\" name=\"age\" value=\""+atr3+"\">");
+      out.print("<input type=\"text\" id=\"age\" class=\"person_ageInput\" name=\"age\" value=\""+atr3+"\">");
     out.print("</div>");
     //String type = request.getAuthType(typeAndPlace);
 

@@ -5,6 +5,7 @@
 <style><%@include file="/WEB-INF/css/style.css"%></style>
 
 <div class="item">
+
   <%
 
     String atr2 = "aaa";
@@ -21,7 +22,8 @@
 //    <option value="2" selected="selected">test2</option>
 //    <option value="3">test3</option>
 //    </select>
-    out.print("<button class=\"person_CloseBtn item_addItemBtn\">X</button>");
+    out.print("<button class=\"person_CloseBtn item_addItemBtn item_closeBtn\">X</button>");
+    out.print("<div class=\"item_title\">ADD ITEM</div>");
     out.print("<select id=\"item_select\" class=\"item_select\">");
       for (Item item : items) {
         out.print("<option value=\"" + item.getID() + "\">" + item.getName() + " - " + item.getPrice() + "</option>");

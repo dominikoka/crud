@@ -57,6 +57,7 @@ public class Read {
   public List<List<String>> showOrders(List<Item> items, List<Person> persons) {
     List<List<String>> result = new ArrayList<>();
     List<String> record;
+    String orderId;
     try {
       Class.forName("com.mysql.cj.jdbc.Driver");
       Connection connection = DriverManager.getConnection(
@@ -66,6 +67,7 @@ public class Read {
       ResultSet resultSet = statement.executeQuery("select * from orders");
       while (resultSet.next()) {
         System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getString(3));
+        orderId = String.valueOf(resultSet.getInt(1));
         int personId = resultSet.getInt(2);
         String personIdString = String.valueOf(personId);
 //        String userName = persons.get(personId).getFirstName();
@@ -95,7 +97,7 @@ public class Read {
 
         System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getString(3));
 
-        record = new ArrayList<>(Arrays.asList(personIdString, userName, lastName, age, itemIdString, itemName, price));
+        record = new ArrayList<>(Arrays.asList(personIdString, userName, lastName, age, itemIdString, itemName, price,orderId));
         result.add(record);
       }
       connection.close();
@@ -148,12 +150,12 @@ public class Read {
             oneRecord = new ArrayList<>(Arrays.asList("Y", list.get(i).get(0), list.get(i).get(1), list.get(i).get(2), list.get(i).get(3)));
             newUser = false;
             result.add(oneRecord);
-            oneRecord = new ArrayList<>(Arrays.asList("N", list.get(i).get(4), list.get(i).get(5), list.get(i).get(6)));
+            oneRecord = new ArrayList<>(Arrays.asList("N", list.get(i).get(4), list.get(i).get(5), list.get(i).get(6),list.get(i).get(7)));
             result.add(oneRecord);
             list.remove(i);
             i = -1;
           } else {
-            oneRecord = new ArrayList<>(Arrays.asList("N", list.get(i).get(4), list.get(i).get(5), list.get(i).get(6)));
+            oneRecord = new ArrayList<>(Arrays.asList("N", list.get(i).get(4), list.get(i).get(5), list.get(i).get(6),list.get(i).get(7)));
             result.add(oneRecord);
             list.remove(i);
             i = -1;

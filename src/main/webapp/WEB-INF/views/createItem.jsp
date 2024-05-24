@@ -2,7 +2,8 @@
 <%@ page import="javax.swing.*" %>
 <style><%@include file="/WEB-INF/css/style.css"%></style>
 
-<div class="createPerson">
+<div class="createItem">
+
   <%
     String atr1 = "name";
     String atr2 = "price";
@@ -10,12 +11,13 @@
     String typeAndPlace = (String) request.getAttribute("typeAndPlace");
     request.setAttribute("type",typeAndPlace);
     String type = typeAndPlace;
-    out.print("<button class=\"person_CloseBtn\">X</button>");
+    out.print("<button class=\"person_CloseBtn createPerson_CloseBtn reset-Button item_CloseBtn\">X</button>");
+    out.print("  <div class=\"createItem_title\">CREATE ITEM</div>");
     out.print("<div class=\"item_name\">");
-    out.print("<input type=\"text\" id=\"firstName\" name=\"firstName\" value=\""+atr1+"\">");
+    out.print("<input type=\"text\" class=\"createItem_name\" id=\"firstName\" name=\"firstName\" value=\""+atr1+"\">");
     out.print("</div>");
     out.print("<div class=\"item_price\">");
-    out.print("<input type=\"text\" id=\"lastName\" name=\"lastName\" value=\""+atr2+"\">");
+    out.print("<input type=\"text\" id=\"lastName\" class=\"createItem_price\" name=\"lastName\" value=\""+atr2+"\">");
     out.print("</div>");
     //String type = request.getAuthType(typeAndPlace);
 
@@ -23,7 +25,7 @@
 //      String url = "http://localhost:8089/changeValues?"+"a1="+fName+"&a2="+atr2+"&a3="+atr3+"&type="+typeAndPlace;
     String url = "http://localhost:8089/changeValues";
 
-    out.print("<button class=\"person_SendBtn \">SEND!!!</button>");
+    out.print("<button class=\"person_SendBtn createPerson_SendBtn reset-Button\">SEND!!!</button>");
     out.print("</div>");
 
   %>
@@ -33,7 +35,7 @@
 <script>
     var dbID = "<%= typeAndPlace %>";
     $(".person_CloseBtn").click(function () {
-        const div = document.querySelector(".createPerson");
+        const div = document.querySelector(".createItem");
         div.innerHTML="";
         // $('.emailSender,.header,.footer').css('filter', 'blur(0px)');
     })
